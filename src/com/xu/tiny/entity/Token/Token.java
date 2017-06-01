@@ -1,4 +1,4 @@
-package com.xu.tiny.entity;
+package com.xu.tiny.entity.Token;
 
 /**
  * Created by xu on 2017/5/31.

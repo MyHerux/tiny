@@ -1,6 +1,6 @@
 package com.xu.tiny.exception;
 
-import com.xu.tiny.entity.Token;
+import com.xu.tiny.entity.Token.Token;
 
 import java.io.IOException;
 
