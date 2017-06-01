@@ -1,10 +1,10 @@
 package com.xu.tiny.core;
 
 import com.xu.tiny.CodeDialog;
-import com.xu.tiny.entity.Token.IdToken;
-import com.xu.tiny.entity.Token.NumToken;
-import com.xu.tiny.entity.Token.StrToken;
-import com.xu.tiny.entity.Token.Token;
+import com.xu.tiny.entity.token.IdToken;
+import com.xu.tiny.entity.token.NumToken;
+import com.xu.tiny.entity.token.StrToken;
+import com.xu.tiny.entity.token.Token;
 import com.xu.tiny.exception.ParseException;
 
 import java.io.IOException;

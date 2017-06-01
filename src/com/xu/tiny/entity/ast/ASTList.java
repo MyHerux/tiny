@@ -1,4 +1,4 @@
-package com.xu.tiny.entity.AST;
+package com.xu.tiny.entity.ast;
 
 import java.util.Iterator;
 import java.util.List;

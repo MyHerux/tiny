@@ -1,4 +1,4 @@
-package com.xu.tiny.entity.Token;
+package com.xu.tiny.entity.token;
 
 /**
  * 数字类型

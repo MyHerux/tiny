@@ -1,6 +1,6 @@
-package com.xu.tiny.entity.AST;
+package com.xu.tiny.entity.ast;
 
-import com.xu.tiny.entity.Token.Token;
+import com.xu.tiny.entity.token.Token;
 
 /**
  * Created by xu on 2017/6/1.

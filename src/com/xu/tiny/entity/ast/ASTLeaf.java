@@ -1,6 +1,6 @@
-package com.xu.tiny.entity.AST;
+package com.xu.tiny.entity.ast;
 
-import com.xu.tiny.entity.Token.Token;
+import com.xu.tiny.entity.token.Token;
 
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -13,7 +13,7 @@ public class ASTLeaf extends ASTree {
     private static ArrayList<ASTree> empty = new ArrayList<>();
     private Token token;
 
-    ASTLeaf(Token t) {
+    public ASTLeaf(Token t) {
         token = t;
     }
 
