@@ -1,7 +1,7 @@
 package com.xu.tiny.entity;
 
 /**
- * 结束符
+ * 标示符
  */
 public class IdToken extends Token {
     private String text;

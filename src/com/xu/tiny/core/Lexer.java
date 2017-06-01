@@ -25,10 +25,25 @@ public class Lexer {
 
     private ArrayList<Token> queue = new ArrayList<>();
 
-    public static String regexpat =
+    //匹配字符
+    /*
+    \s*((//.*)|([0-9]+)|("(\n|\\\\|\\"|[^"])*")|([A-Z_a-z][A-Z_a-z0-9]*)|==|<=|>=|&&|\|\||\p{Punct})
+     \s*                        前导空白符
+     (//.*)                     //注释符 2
+     ([0-9]+)                   整形 3
+     ("(\n|\\\\|\\"|[^"])*")    字符串 里面可以有// \" 4
+     ([A-Z_a-z][A-Z_a-z0-9]*)   标识符
+     ==
+     <=
+     >=
+     &&
+     \|\|                       ||
+     p{Punct}                   POSIX 字符类 表示标点符号
+     */
+    private static String regexPat =
             "\\s*((//.*)|([0-9]+)|(\"(\\\\\"|\\\\\\\\|\n|[^\"])*\")|([A-Z_a-z][A-Z_a-z0-9]*)|==|<=|>=|&&|\\|\\||\\p{Punct})";
 
-    private Pattern pattern = Pattern.compile(regexpat);
+    private Pattern pattern = Pattern.compile(regexPat);
 
     public Lexer(Reader reader) {
         hasMore = true;
@@ -60,6 +75,7 @@ public class Lexer {
         return true;
     }
 
+    //读取单行代码
     private void readLine() throws ParseException {
         String line;
         try {
