@@ -46,7 +46,7 @@ public class BasicParser {
     protected Parser statement = statement0.or(
             rule(IfStatement.class).sep("if").ast(expr).ast(block)
                     .option(rule().sep("else").ast(block)),
-            rule(WhileStatement.class).sep("while").ast(expr).ast(block),
+            rule(WhileStatement.class).sep("fuck").ast(expr).ast(block),
             simple
     );
 

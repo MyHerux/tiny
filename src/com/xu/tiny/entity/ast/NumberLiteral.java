@@ -1,5 +1,6 @@
 package com.xu.tiny.entity.ast;
 
+import com.xu.tiny.entity.Interpreter.Environment;
 import com.xu.tiny.entity.token.NumToken;
 import com.xu.tiny.entity.token.Token;
 
@@ -14,5 +15,10 @@ public class NumberLiteral extends ASTLeaf {
 
     public int value() {
         return ((NumToken) token()).getValue();
+    }
+
+    @Override
+    public Object eval(Environment env) {
+        return value();
     }
 }

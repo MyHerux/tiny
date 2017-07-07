@@ -1,6 +1,8 @@
 package com.xu.tiny.entity.ast;
 
+import com.xu.tiny.entity.Interpreter.Environment;
 import com.xu.tiny.entity.token.Token;
+import com.xu.tiny.exception.TinyException;
 
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -40,6 +42,11 @@ public class ASTLeaf extends ASTree {
     @Override
     public String location() {
         return "第" + token.getLineNumber() + "行";
+    }
+
+    @Override
+    public Object eval(Environment env) {
+        throw  new TinyException("无法执行 eval "+toString(),this);
     }
 
     Token token() {

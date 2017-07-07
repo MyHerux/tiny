@@ -1,5 +1,7 @@
 package com.xu.tiny.entity.ast;
 
+import com.xu.tiny.entity.Interpreter.Environment;
+
 import java.util.Iterator;
 
 /**
@@ -19,6 +21,7 @@ public abstract class ASTree implements Iterable<ASTree> {
     //返回当前节点在程序位置的字符串
     public abstract String location();
 
+    public abstract Object eval(Environment env);
 
     public Iterator<ASTree> iterator() {
         return children();

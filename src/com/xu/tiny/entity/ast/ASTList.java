@@ -1,5 +1,8 @@
 package com.xu.tiny.entity.ast;
 
+import com.xu.tiny.entity.Interpreter.Environment;
+import com.xu.tiny.exception.TinyException;
+
 import java.util.Iterator;
 import java.util.List;
 
@@ -53,5 +56,10 @@ public class ASTList extends ASTree {
             }
         }
         return null;
+    }
+
+    @Override
+    public Object eval(Environment env) {
+        throw  new TinyException("无法执行 eval "+toString(),this);
     }
 }
